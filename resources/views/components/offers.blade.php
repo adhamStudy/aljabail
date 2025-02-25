@@ -1,4 +1,4 @@
-<div class="p-10 ">
+<div id="offersLink" class="p-10 ">
     <h3 class="font-bold text-2xl text-blue-700 text-center">أبرز العروض</h3>
     <x-offer-card title="العرض الاول" description="شقة سكنية متكاملة في منطقة الشرقية"
         image="/storage/images/offers/ap1.png" />

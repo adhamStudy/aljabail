@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ContactUs;
+use App\View\Components\Contact;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -53,28 +56,26 @@ class HomeController extends Controller
      }
      public function gallery(){
     
-      $heroData = [
-        '1' => [
-            'title' => 'Structural Design',
-            'description' => 'Our structural designs ensure safe and durable buildings.',
-            
-        ],
-        '2' => [
-            'title' => 'Foundation Work',
-            'description' => 'Solid foundation work is the cornerstone of every great building project.',
+        $heroData = [
+            '1' => [
+                'title' => 'التصميم الهيكلي',
+                'description' => 'تصاميمنا الهيكلية تضمن المباني الآمنة والدائمة.',
+            ],
+            '2' => [
+                'title' => 'أعمال الأساسات',
+                'description' => 'أعمال الأساسات القوية هي أساس كل مشروع بناء عظيم.',
+            ],
+            '3' => [
+                'title' => 'خدمات البناء',
+                'description' => 'نبني رؤيتك مع خدمات البناء عالية الجودة.',
+            ],
+            '4' => [
+                'title' => 'الدهانات والتشطيبات',
+                'description' => 'إضافة الألوان والتشطيبات لمشاريعك.',
+            ]
+        ];
         
-        ],
-        '3' => [
-            'title' => 'Construction Services',
-            'description' => 'Building your vision with top-quality construction services.',
-           
-        ],
-        '4' => [
-            'title' => 'Painting & Finishing',
-            'description' => 'Bringing color and finishing touches to your projects.',
-           
-        ]
-    ];
+        
     $pathes=[
         'nothing',
         'struct',
@@ -96,9 +97,29 @@ class HomeController extends Controller
       return view('pages.about');
      }
      public function contact(){
-    
-      return view('pages.contact');
+        // limit the number of messages to 2 
+        $messages = ContactUs::latest()->limit(3)->get();
+        return view('pages.contact')->with('messages',$messages);
      }
 
+    public function store(Request $request){
+        $data = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'message' => 'required|string',
+        ]);
+        
+        $emailExists = DB::table('contact_us')->where('email', request('email'))->exists();
+      
+        if($emailExists)
+        {
+            return redirect()->back()->with('error', 'هذا الايميل مدون بالفعل يرجى استخدام بريد الكتروني اخر' );       
+        }
+    
+
+
+        ContactUs::create($data);
+        return redirect()->back()->with('success', 'تم اضافة استفسارك بنجاح ، شكراُ لك');       
+    }
    }
    

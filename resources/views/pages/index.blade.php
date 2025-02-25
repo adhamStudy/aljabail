@@ -1,4 +1,4 @@
-<x-layout title="This is aljabail">
+<x-layout title="ابن الجبيل">
     @if (Request::is('/'))
         <x-hero />
     @endif

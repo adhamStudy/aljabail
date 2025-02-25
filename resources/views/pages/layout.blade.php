@@ -14,8 +14,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-    <title>{{ $title ?? ' ' }}</title>
+    <!-- Favicon from the storage/images folder -->
+    <link rel="icon" href="{{ asset('storage/images/w logo.png') }}" type="image/png">
+
+    <title>{{ $title ?? 'ابن الجبيل' }}</title>
 </head>
+
+
+
 
 <body class="m-0 p-0">
 
@@ -28,7 +34,7 @@
 
 
     </main>
-    <a href="https://wa.me/yourwhatsappphone" target="_blank"
+    <a href="https://wa.me/+966507854326" target="_blank"
         class="fixed bottom-4 left-4 z-50 w-16 h-16 bg-green-500 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition">
         <i class="fab fa-whatsapp text-white text-4xl"></i>
     </a>

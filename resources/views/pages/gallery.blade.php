@@ -50,7 +50,7 @@
 
 
         <h3 class="text-center text-3xl text-blue-600 font-bold mt-10 mb-5">
-            تصفح أعمالنا ب;ل حب
+            تصفح أعمالنا بكل حب
         </h3>
 
         <div x-data="{ selectedImage: '', isOpen: false }">
