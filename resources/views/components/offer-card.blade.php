@@ -34,7 +34,7 @@
         <div class="flex justify-center items-center">
 
             <button class="border border-black  px-4 py-2 text-black font-semibold rounded-full   transition">
-                احجز الان
+                <a href="https://wa.me/+966507854326" target="_blank">احجز الان </a>
             </button>
 
         </div>

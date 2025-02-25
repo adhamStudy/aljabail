@@ -28,7 +28,7 @@
 
         <div class="flex justify-center md:justify-start mt-4">
             <button class="bg-white text-black rounded-full border p-3 border-black transition hover:bg-gray-200">
-                تواصل بنا
+                <a href="https://wa.me/+966507854326" target="_blank">تواصل بنا</a>
             </button>
         </div>
     </div>
