@@ -15,7 +15,7 @@ class layout extends Component
     {
         //
     }
-
+    /// add commen
     /**
      * Get the view / contents that represent the component.
      */
