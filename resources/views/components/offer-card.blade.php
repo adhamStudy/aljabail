@@ -3,6 +3,7 @@
     'image' => '/storage/images/hero.jpg',
     'description' => 'This is a collapsible section containing an image, paragraph, and a button.',
 ])
+
 <div x-data="{ open: false }" class="mt-5 w-full bg-white shadow-lg rounded-xl">
     <!-- Collapsible Button -->
     <button @click="open = !open"
@@ -23,20 +24,21 @@
     </button>
 
     <!-- Collapsible Content -->
-    <div x-show="open" x-transition class="p-6  space-y-4 border-t bg-gray-50">
-        <p class="text-gray-700 text-2xl text-center mb-4">
+    <div x-show="open" x-transition class="p-6 space-y-4 border-t bg-gray-50">
+        <p class="text-gray-700 text-xl text-center mb-4">
             {{ $description }}
+        </p>
 
-        <div class="flex justify-center items-center">
-            <img src="{{ url($image) }}" alt="Example Image" class="w-1/2 h-80 object-cover rounded-lg shadow-md">
+        <div class="flex justify-center">
+            <img src="{{ url($image) }}" alt="Example Image"
+                class="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-auto object-cover rounded-lg shadow-md">
         </div>
 
-        <div class="flex justify-center items-center">
-
-            <button class="border border-black  px-4 py-2 text-black font-semibold rounded-full   transition">
-                <a href="https://wa.me/+966507854326" target="_blank">احجز الان </a>
-            </button>
-
+        <div class="flex justify-center">
+            <a href="https://wa.me/+966507854326" target="_blank"
+                class="border border-black px-6 py-2 text-black font-semibold rounded-full transition hover:bg-black hover:text-white">
+                احجز الان
+            </a>
         </div>
     </div>
 </div>
