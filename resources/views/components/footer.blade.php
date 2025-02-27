@@ -6,7 +6,7 @@
         </h2>
 
         <!-- روابط التواصل الاجتماعي -->
-        <div class="flex gap-4">
+        {{-- <div class="flex gap-4">
             <a href="https://x.com/adhm0e6w?t=EvdP4C8x4XuxTimolQoUbw&s=09" target="_blank"
                 class="text-gray-400 hover:text-blue-400 transition text-xl">
                 <i class="fab fa-twitter"></i>
@@ -19,7 +19,7 @@
                 class="text-gray-400 hover:text-green-500 transition text-xl">
                 <i class="fab fa-whatsapp"></i>
             </a>
-        </div>
+        </div> --}}
 
         <!-- حقوق النشر -->
         <p class="text-gray-500 text-xs">
