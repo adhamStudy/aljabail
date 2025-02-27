@@ -6,7 +6,7 @@
     <div class="relative flex flex-col items-center text-white space-y-5 max-w-3xl w-full">
         <!-- Logo -->
         <div class="w-24 h-24 rounded-full bg-white shadow-lg flex justify-center items-center overflow-hidden">
-            <img src="/storage/images/w logo.png" alt="Logo" class="w-full h-full object-cover">
+            <img src="images/w logo.png" alt="Logo" class="w-full h-full object-cover">
         </div>
 
         <!-- Title -->
