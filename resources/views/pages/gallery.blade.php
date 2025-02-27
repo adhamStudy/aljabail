@@ -10,7 +10,7 @@
         heroData: app,
         pathes: pathes,
         indexes: indexes,
-        imagePath: '/storage/images/gallery/' + {{ $active }} + '.jpg',
+        imagePath: 'images/gallery/' + {{ $active }} + '.jpg',
     
     
     }">
