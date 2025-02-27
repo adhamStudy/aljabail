@@ -16,22 +16,22 @@
     }">
         <div class="flex items-center justify-evenly my-2 w-full">
             <button :class="active === 1 ? 'bg-blue-600 text-white' : 'bg-yellow-500'"
-                @click="active = 1; imagePath = '/storage/images/gallery/1.jpg'"
+                @click="active = 1; imagePath = 'images/gallery/1.jpg'"
                 class="rounded-lg shadow-sm py-2 px-2 m-3 hover:bg-blue-600 hover:text-white">
                 Struct
             </button>
             <button :class="active === 2 ? 'bg-blue-600 text-white' : 'bg-yellow-400'"
-                @click="active = 2; imagePath = '/storage/images/gallery/2.jpg'"
+                @click="active = 2; imagePath = 'images/gallery/2.jpg'"
                 class="rounded-lg shadow-sm py-2 px-2 m-3 hover:bg-blue-600 hover:text-white">
                 Foundation
             </button>
             <button :class="active === 3 ? 'bg-blue-600 text-white' : 'bg-yellow-400'"
-                @click="active = 3; imagePath = '/storage/images/gallery/3.jpg'"
+                @click="active = 3; imagePath = 'images/gallery/3.jpg'"
                 class="rounded-lg shadow-sm py-2 px-2 m-3 hover:bg-blue-600 hover:text-white">
                 Construct
             </button>
             <button :class="active === 4 ? 'bg-blue-600 text-white' : 'bg-yellow-400'"
-                @click="active = 4; imagePath = '/storage/images/gallery/4.jpg'"
+                @click="active = 4; imagePath = 'images/gallery/4.jpg'"
                 class="rounded-lg shadow-sm py-2 px-2 m-3 hover:bg-blue-600 hover:text-white">
                 Paint
             </button>
@@ -58,8 +58,8 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4">
                 <template x-for="index in indexes[active]" :key="index">
                     <div class="relative">
-                        <img :src="`/storage/images/gallery/${pathes[active]}/${pathes[active]}${index-1}.jpg`"
-                            @click="selectedImage = `/storage/images/gallery/${pathes[active]}/${pathes[active]}${index-1}.jpg`; isOpen = true"
+                        <img :src="`images/gallery/${pathes[active]}/${pathes[active]}${index-1}.jpg`"
+                            @click="selectedImage = `images/gallery/${pathes[active]}/${pathes[active]}${index-1}.jpg`; isOpen = true"
                             class="w-full aspect-square object-cover rounded-lg shadow-md cursor-pointer 
                                hover:scale-105 hover:opacity-90 transition-transform duration-200"
                             alt="Gallery Image">
