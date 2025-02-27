@@ -17,9 +17,18 @@
     <!-- Favicon from the storage/images folder -->
     <link rel="icon" href="{{ asset('storage/images/w logo.png') }}" type="image/png">
 
+    <!-- Add Tajawal Arabic Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+
+    <!-- Apply the font to your CSS -->
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+
     <title>{{ $title ?? 'ابن الجبيل' }}</title>
 </head>
-
 
 
 
