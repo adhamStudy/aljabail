@@ -21,7 +21,7 @@ class HomeController extends Controller
      $services = [
       [
           'label' => 'التشطيبات',
-          'image' => asset('/storage/images/1.jpg'),
+          'image' => asset('images/1.jpg'),
           'items' => [
               'دهانات' => 'دهانات عالية الجودة ومقاومة للعوامل الجوية',
               'أرضيات' => 'توفير وتركيب جميع أنواع الأرضيات',
@@ -30,7 +30,7 @@ class HomeController extends Controller
       ],
       [
           'label' => 'الديكورات',
-          'image' => asset('/storage/images/2.jpg'),
+          'image' => asset('images/2.jpg'),
           'items' => [
               'ديكورات جبس' => 'تصميم ديكورات جبسية مميزة',
               'إضاءة ديكورية' => 'توفير حلول إضاءة ديكورية جذابة',
@@ -39,7 +39,7 @@ class HomeController extends Controller
       ],
       [
           'label' => 'التصميم الداخلي',
-          'image' => asset('/storage/images/3.jpg'),
+          'image' => asset('images/3.jpg'),
           'items' => [
               'تصميم غرف' => 'تصميم غرف عصرية تتناسب مع المساحات المتوفرة',
               'تصميم مطابخ' => 'تصميم مطابخ عملية بأحدث الأساليب',

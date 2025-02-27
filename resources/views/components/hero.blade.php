@@ -1,6 +1,5 @@
 <div class="relative w-full h-[600px] md:h-[700px] bg-cover bg-center flex justify-center items-center text-center px-6"
-    style="background-image: url('/storage/images/hero.jpg'); background-size: cover; background-position: center;">
-
+    style="background-image: url('{{ asset('images/hero.jpg') }}'); background-size: cover; background-position: center;"
     <!-- Dark overlay for readability -->
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
